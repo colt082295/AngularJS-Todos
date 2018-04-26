@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+}
+
+.todos {
+    list-style: none;
+    padding: 1em 2em;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    background: whitesmoke;
+    box-shadow: 0px 0px 0px 1px #989898;
+    transition: all .2s ease-in-out;
+}
+
+.todo-item:hover {
+    background: white;
+    cursor: pointer;
+}
+
+.todo-item.finished {
+    background: white;
+}
+
+.todo-item:first-of-type {
+    border-radius: 5px 5px 0 0;
+}
+
+.todo-item:last-of-type {
+    border-radius: 0 0 5px 5px;
+}
+
+.item-description {
+    margin: 0 1em;
+    padding: 1em 0;
+    position: relative;
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.todo-item.finished .item-description::after {
+    content: '';
+    border-bottom: 2px solid #0064b9c7;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+}
+
+.item-description-wrapper {
+    flex: 1;
+}
+
+.view-task {
+    width: 10%;
+    background: silver;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-link {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: black;
+}
+
+.todo-wrapper {
+    padding: 1em;
+}
+
+.todo {
+    box-shadow: 0px 0px 1px 1px silver;
+    padding: 1em;
+}
+
+.todo-task {
+    font-size: 1.6rem;
+}

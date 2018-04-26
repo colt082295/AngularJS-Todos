@@ -1,0 +1,8 @@
+<div class="todo-wrapper" ng-controller="todoController">
+    <div class="todo">
+        <span class="todo-task" ng-hide="editing" ng-dblclick="editItem($event,todo)">{{todo.item}}</span>
+        <input class="todo-task" ng-show="editing" ng-model="todo.item" ng-blur="doneEditing(todo)" autofocus />
+        <p class="finished" ng-show="todo.finished">Task finished!</p>
+        <p class="finished" ng-show="!todo.finished">Task not finished!</p>
+    </div>
+</div>

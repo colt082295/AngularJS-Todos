@@ -1,0 +1,18 @@
+<div class="todos-wrapper" ng-controller="todosController">
+    <ul class="todos">
+        <li ng-repeat="todo in todos" ng-class="{'finished': todo.finished}" class="todo-item">
+            <div class="item-description-wrapper" ng-click="clickedTodo($index)">
+                <div class="item-description">
+                        {{ todo.item }}
+                </div>
+            </div>
+            <div class="view-task">
+                <a class="todo-link" href="/task/{{ todo.id }}">View</a>
+            </div>
+        </li>
+    </ul>
+    <form>
+        <input type="text" ng-model="newTodo">
+        <button ng-click="addTodo()">Add Todo</button>
+    </form>
+</div>
